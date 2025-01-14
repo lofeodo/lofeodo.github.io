@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daniel Lofeodo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sixtyfour&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="lineThroughSphere" id="heroLine"></div>
+    <div class="lineThroughSphere" id="aboutLine"></div>
+    <div class="lineThroughSphere" id="portfolioLine"></div>
+    <div class="lineThroughSphere" id="contactLine"></div>
+    <canvas class="webgl"></canvas>
+    <script type="module" src="/main.js"></script>
+      <div class="grid">
+          <div class="page hero" id="heroID">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div class="titlebar">
+                  <div class="navigation">
+                      <button onclick="scrollToSection('aboutID')">About</button>
+                      <button onclick="scrollToSection('portfolioID')">Portfolio</button>
+                      <button onclick="scrollToSection('contactID')">Contact</button>
+                  </div>
+              </div>
+              <div class="content" id="heroContent">
+                <span id="rollingHeroText">Programmer</span>
+                <h1 class="name" id="name"></h1>
+                <div class="text">
+                    <span>I am a programmer based in Montreal</span>
+                    <span>I am passionate about making ideas come to life</span>
+                    <span>I love nature, the sun, and adventure</span>
+                </div>
+              </div>
+          </div>
+          <div class="page about" id="aboutID">             
+              <div class="top-left"></div>
+              <div class="top-middle"></div>
+              <div class="top-right"></div>
+              <div class="titlebar marquee" id="aboutMarquee">
+                  <div class="marquee-content scroll">
+                      <span>ABOUT</span>
+                      <span>/</span>
+                      <span>TOOLBELT</span>
+                      <span>/</span>
+                      <span>ABOUT</span>
+                      <span>/</span>
+                      <span>TOOLBELT</span>
+                      <span>/</span>
+                    </div>
+                  <div class="marquee-content scroll">
+                    <span>ABOUT</span>
+                      <span>/</span>
+                      <span>TOOLBELT</span>
+                      <span>/</span>
+                      <span>ABOUT</span>
+                      <span>/</span>
+                      <span>TOOLBELT</span>
+                      <span>/</span>
+                    </div>
+              </div>
+              <div></div>
+              <div class="content">
+                <div class="text">
+                    <h2>Hello, I am Daniel</h2>
+                    <span>I am a craftsman and computers are my tools.</span>
+                    <span>My purpose is to bring ideas to life.</span>
+                    <span>With a proclivity for both mathematics and aesthetics, I love to create both back end and front end systems.</span>
+                    <span>Here are some tools I've worked with :</span>
+                </div>
+                <ul class="toolbelt">
+                    <li>C++</li>
+                    <li>C#</li>
+                    <li>Java</li>
+                    <li>Ruby</li>
+                    <li>Julia</li>
+                    <li>Python</li>
+                    <li>XAML</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Three.js</li>
+                    <li>GSAP</li>
+                    <li>Node.js</li>
+                    <li>WPF</li>
+                    <li>WinForms</li>
+                    <li>.NET</li>
+                    <li>LINQ</li>
+                </ul>
+              </div>
+              <div></div>
+          </div>
+          <div class="page portfolio" id="portfolioID">              
+              <div class="top-left"></div>
+              <div class="top-middle"></div>
+              <div class="top-right"></div>
+              <div class="titlebar marquee" id="portfolioMarquee">
+                  <div class="marquee-content scroll">
+                      <span>PORTFOLIO</span>
+                      <span>PORTFOLIO</span>
+                      <span>PORTFOLIO</span>
+                      <span>PORTFOLIO</span>
+                      <span>PORTFOLIO</span>
+                      <span>PORTFOLIO</span>
+                  </div>
+                  <div class="marquee-content scroll">
+                      <span>PORTFOLIO</span>
+                      <span>PORTFOLIO</span>
+                      <span>PORTFOLIO</span>
+                      <span>PORTFOLIO</span>
+                      <span>PORTFOLIO</span>
+                      <span>PORTFOLIO</span>
+                  </div>
+              </div>
+              <div></div>
+              <div class="content">
+                <div class="swipe-left-animation">
+                    <div class="image-w-text right-aligned">
+                        <a href="github.com/lofeodo" target="_blank">
+                            <img src="https://builtin.com/cdn-cgi/image/f=auto,quality=80,width=752,height=435/https://builtin.com/sites/www.builtin.com/files/styles/byline_image/public/2021-12/machine-learning-examples-applications.png">
+                        </a>
+                        <text-box>
+                            <h2>Machine Learning</h2>
+                            <p>A machine learning model capable of predicting hurricanes trajectories.</p>
+                        </text-box>
+                    </div>
+                </div>
+                <div class="image-w-text left-aligned">
+                    <a href="github.com/lofeodo" target="_blank">
+                        <img src="https://www.lifewire.com/thmb/uFm-7Fx90fZ7qvwLF6i0Qpwcm-k=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/notepad-plus-plus-d552fd90f9834d41a5294bb5766dfaf9.png">
+                    </a>
+                    <text-box>
+                        <h2>Text editor</h2>
+                        <p>A WPF text editor that serves as an in-between MS Word and Notepad.</p>
+                    </text-box>
+                </div>
+              </div>
+              <div></div>
+          </div>
+          <div class="page contact" id="contactID">
+              <div class="top-left"></div>
+              <div class="top-middle"></div>
+              <div class="top-right"></div>
+              <div class="titlebar marquee" id="contactMarquee">
+                  <div class="marquee-content scroll">
+                      <span>CONTACT</span>
+                      <span>CONTACT</span>
+                      <span>CONTACT</span>
+                      <span>CONTACT</span>
+                      <span>CONTACT</span>
+                      <span>CONTACT</span>
+                  </div>
+                  <div class="marquee-content scroll">
+                      <span>CONTACT</span>
+                      <span>CONTACT</span>
+                      <span>CONTACT</span>
+                      <span>CONTACT</span>
+                      <span>CONTACT</span>
+                      <span>CONTACT</span>
+                  </div>
+              </div>
+              <div></div>
+              <div class="content">
+                <div class="email">
+                    <span>Say hi!</span>
+                    <h1>daniel.lofeodo@gmail.com</h1>
+                </div>
+              </div>
+              <div></div>
+          </div>
+      </div>
+      <script src="scrollToFunction.js"></script>
+      <script src="sphereLines.js"></script>
+      <script src="rollingText.js"></script>
+      <script src="typeWriter.js"></script>
+      <script src="scrollingEffects.js"></script>
+  </body>
+</html>

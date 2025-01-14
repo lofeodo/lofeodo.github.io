@@ -1,0 +1,314 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+.webgl{
+  position: fixed;
+  top: var(--webGlMargin);
+  right: var(--webGlMargin);
+  z-index: 1;
+  cursor: grab;
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body{
+  margin: 0;
+  max-width: 100%;
+  height: auto;
+
+  font-family: 'Roboto Mono';
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: transparent transparent; /* Firefox */
+}
+
+/* For Webkit browsers like Chrome and Safari */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.scrollme{
+  position: absolute;
+  z-index: 2;
+  font-size: 1rem;
+}
+
+.grid > div > div {
+  margin: 0;
+  background-color: black;
+  padding: 30px;
+  height: 100%;
+  width: 100%;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
+
+  height: auto;
+
+  margin: 0;
+  background: white;
+}
+
+.page{
+  display: grid;
+
+  min-height: 100vh;
+  max-height: auto;
+  align-items: center;
+
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 1px;
+  border-bottom: 1px solid white;
+}
+
+.contact{
+  border-bottom: none;
+}
+
+.titlebar{
+  font: 1em 'Sixtyfour';
+  grid-area: 1 / 1 / 1 / 4;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.about .titlebar, .portfolio .titlebar, .contact .titlebar{
+  background-color: transparent;
+  padding: 50px 0px;
+}
+
+.hero .titlebar{
+  grid-area: 1 / 2 / 1 / 2;
+}
+
+.hero .content{
+  display: inline-block;
+  padding: 150px 80px;
+  padding-bottom: 250px;
+}
+
+.hero .name{
+  position: relative;
+  left: 8%;
+  font-size: 3em;
+}
+
+.text{
+  font-size: 1.5rem;
+}
+
+.hero .text{
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
+  height: 100%;
+}
+
+.hero .text span{
+  padding: 5px 0px;
+}
+
+.about .content{
+  padding: 50px;
+}
+
+.about h2{
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.about .text{
+  display: flex;
+  flex-direction: column;
+}
+
+.about .text span{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.about .toolbelt{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+.about .toolbelt li{
+  text-align: center;
+  height: 20px;
+  flex: 0 10cqw;
+  margin: 10px;
+  font-size: 1.2em;
+}
+
+.portfolio .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.image-w-text {
+  margin: 30px auto;
+  width: 80%;
+}
+
+.image-w-text img{
+  max-width: 300px;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin: 5px 0px;
+}
+
+.right-aligned img {
+  float: left;
+  margin-right: 15px;
+}
+
+.left-aligned img {
+  float: right;
+  margin-left: 15px;
+}
+
+.left-aligned text-box {
+  text-align: right;
+}
+
+.contact .email{
+  position: relative;
+  top: 45%;
+}
+
+.contact .email span{
+  font-size: 3cqw;
+}
+
+.contact .email h1{
+  font-size: 4cqw;
+}
+
+.top-left{
+  grid-area: 1 / 1 / 1 / 1;
+}
+
+.top-middle{
+  grid-area: 1 / 2 / 1 / 2;
+}
+
+.top-right{
+  grid-area: 1 / 3 / 1 / 3;
+}
+
+.content
+{
+  grid-area: 2 / 2 / 2 / 2;
+}
+
+.navigation{
+  display: flex;
+  justify-self: left;
+  font-size: 1em;
+  width: 300;
+}
+
+button{
+  padding-right: 30px;
+  font: 1em 'Roboto Mono';
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.marquee{
+  display: flex;
+  overflow-x: hidden;
+  gap: 1rem;
+  position: relative;
+  user-select: none;
+  z-index: 2;
+
+  mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+.marquee::before{
+  left: 0;
+  right: 90%;
+}
+
+.marquee-content{
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  gap: 1rem;
+}
+
+.scroll {
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(calc(-100% - 1rem));
+  }
+}
+
+.lineThroughSphere{
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  border-top: 1px solid white;
+}
+
+.rollingEffect {
+  display: inline-block;
+  animation: roll 3s infinite; /* Adjust the duration as needed */
+}
+
+@keyframes roll {
+  0%, 20% {
+    transform: translateY(0);
+  }
+  40%, 60% {
+    transform: translateY(-100%);
+  }
+  80%, 100% {
+    transform: translateY(0);
+  }
+}
+
+.swipe-left-animation {
+  opacity: 0;
+  transform: translateX(-25%);
+  transition: opacity 1s, transform 1s;
+}
+
+.animation-visible {
+  opacity: 1;
+  transform: translateX(0);
+  transform: translateY(0);
+}
