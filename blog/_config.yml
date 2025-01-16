@@ -3,7 +3,7 @@ title:               'Projet de session &middot; IFT6758'
 tagline:             Blog
 description:         ''
 url:                 ''
-baseurl:             ''
+baseurl:             '/NHL-Goal-Probability-Prediction'
 paginate:            3
 permalink:           pretty
 
