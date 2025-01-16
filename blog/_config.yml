@@ -2,7 +2,7 @@
 title:               'Projet de session &middot; IFT6758'
 tagline:             Blog
 description:         ''
-url:                 ''
+url:                 'https://lofeodo.github.io'
 baseurl:             '/blog'
 paginate:            3
 permalink:           pretty
