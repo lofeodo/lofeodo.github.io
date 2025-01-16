@@ -49,7 +49,7 @@ updateWebGlMargin();
 const controls = new OrbitControls(camera, canvas);
 controls.enableDamping = true;
 controls.autoRotate = true;
-controls.autoRotateSpeed = 10;
+controls.autoRotateSpeed = 5;
 controls.enablePan = false;
 controls.enableZoom = false;
 

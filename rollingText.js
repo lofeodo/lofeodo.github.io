@@ -1,5 +1,5 @@
 var textElement = document.getElementById('rollingHeroText');
-var states = ['Programmer', 'Craftsman', 'Designer'];
+var states = ['M.Sc.Comp.Sci.', 'B.Eng.Mech.Eng.'];
 var currentStateIndex = 0;
 
 function rollText() {

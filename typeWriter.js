@@ -1,5 +1,5 @@
 const nameElement = document.getElementById("name");
-const nameText = "Daniel Lofeodo.";
+const nameText = "Daniel Lofeodo";
 const caret = "|";
 
 let i = 0;
