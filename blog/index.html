@@ -1,0 +1,47 @@
+---
+layout: default
+title: Home
+---
+
+<div style="margin-bottom: 2rem">
+  Toutes les réponses sont présentes ci-dessous. Pour consulter les réponses pour un milestone en particulier, veuillez utiliser le menu de navigation, ou alors, pour consulter les réponses pour un milestone en particulier:
+  <ul style="padding-top: 1rem"">
+    <li><a href="{{ site.url }}{{ site.baseurl }}/milestone-1">Milestone 1</a></li>
+    <li><a href="{{ site.url }}{{ site.baseurl }}/milestone-2">Milestone 2</a></li>
+  </ul>
+</div>
+<hr>
+<div class="posts">
+  {% assign sorted_posts = paginator.posts | sort: 'question' | sort: 'milestone' | reverse %}
+  {% for post in sorted_posts %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ post.url | absolute_url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+
+    <span class="post-info">{{ post.date | date_to_string }}<span class="post-question">Milestone #<b>{{ post.milestone }}</b></span></span>
+    <span class="post-more-info">{{ post.auteurs }}<span class="post-question">Partie #<b>{{ post.question }}</b></span></span>
+
+    <div class="post-content">{{ post.content }}</div>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ paginator.next_page_path | absolute_url }}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ '/' | absolute_url }}">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ paginator.previous_page_path | absolute_url }}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>
