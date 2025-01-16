@@ -106,11 +106,11 @@ body{
 .hero .name{
   position: relative;
   left: 8%;
-  font-size: 3em;
+  font-size: 3vw;
 }
 
 .text{
-  font-size: 1.5rem;
+  font-size: 1.5vw;
 }
 
 .hero .text{
