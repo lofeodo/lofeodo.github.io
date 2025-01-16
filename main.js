@@ -30,8 +30,8 @@ light.position.set( 0, 0, 10 );
 scene.add(light);
 
 const light2 = new THREE.PointLight(0xffffff, 0.1, 100);
-light2.intensity = 30;
-light2.position.set( 0, 0, -20 );
+light2.intensity = 200;
+light2.position.set( 0, 0, -50 );
 scene.add(light2);
 
 // Camera
