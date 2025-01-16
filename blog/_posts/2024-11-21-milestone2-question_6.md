@@ -18,16 +18,16 @@ Les figures ci-dessous illustrent les performances des modèles, les modèles de
 ** *Pour les figures ci-dessous, nous écrivons: `+`/`-` pour signifier que nous incluons cette méthode ou non*
 
 ### ROC
-![image](/public/advanced_models_visualizations/roc.png)
+![image]({{ site.baseurl }}/public/advanced_models_visualizations/roc.png)
 ### Taux de buts
-![image](/public/advanced_models_visualizations/taux_de_but.png)
+![image]({{ site.baseurl }}/public/advanced_models_visualizations/taux_de_but.png)
 ### Pourcentage de buts cumulés
-![image](/public/advanced_models_visualizations/cumul.png)
+![image]({{ site.baseurl }}/public/advanced_models_visualizations/cumul.png)
 
 Avec les 3 figures ci-dessus, on observe très peu de différences entre les modèles `XGBClassifier` sans *fine-tune* des hyperparamètres et celui avec. En effet, en se basant seulement sur ces figures, on pourrait faire l'hypothèse que *fine-tuner* les hyperparamètres ne procure aucune amélioration des performances. Cependant, nous démontrerons dans la figure ci-dessous que le *fine-tuning* des hyperparamètres permet d'obtenir de meilleures performances et de meilleures prédictions.
 
 ### Diagramme de fiabilité
-![image](/public/advanced_models_visualizations/fiabilite.png)
+![image]({{ site.baseurl }}/public/advanced_models_visualizations/fiabilite.png)
 
 On remarque avec les courbes de fiabilité que le modèle `XGBClassifier`, avec *fine-tuning* des hyperparamètres et sélection des caractéristiques optimales, est le modèle le plus calibré. Par rapport aux autres figures où les modèles `XGBClassifier (+hypeparameters +features)` et `XGBClassifier(-hyperparameters +features)` sont similaires, leurs courbes de fiabilité sont ici très différentes car les prédicitions du modèle `XGBClassifier (+hypeparameters +features)` sont nettement mieux calibrées.
 

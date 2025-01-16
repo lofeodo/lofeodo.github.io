@@ -12,10 +12,10 @@ Cela pourrait être dû à un manque de tirs qui mènent à un but dans les donn
  
 ### Évaluation des performances (figures)
 
-![image](/public/base_models_visualizations/roc.png)
-![image](/public/base_models_visualizations/taux_but.png)
-![image](/public/base_models_visualizations/cumul_buts.png)
-![image](/public/base_models_visualizations/calibration.png)
+![image]({{ site.baseurl }}/public/base_models_visualizations/roc.png)
+![image]({{ site.baseurl }}/public/base_models_visualizations/taux_but.png)
+![image]({{ site.baseurl }}/public/base_models_visualizations/cumul_buts.png)
+![image]({{ site.baseurl }}/public/base_models_visualizations/calibration.png)
 
 En observant la figure montrant le ROC et l'aire sous la courbe (AUC), on remarque que les modèles sont identiques en termes de AUC (0.70). Cette mesure signifie que les modèles sont plutôt bons pour catégoriser les tirs en buts (1) et non buts (0). Cependant, la figure représentant l'évolution du taux de but ainsi que celle représentant le pourcentage de buts cumulé démontrent une similtude entre les modèles **distance** et **distance + angle**. En se basant sur ces figures, on peut en déduire que la caractéristique **angle** n'est pas vraiment importante pour prédire la probabilité qu'un tir soit un but ou non. La similiraté entre les modèles **distance** et **distance + angle** démontre bien que la caractéristique **angle** n'impactera pas vraiment les probabilités de but prédites par le modèle. Il semblerait donc que la **distance** suffit afin d'obtenir des résultats corrects avec un modèle de régression logistique.
 
