@@ -25,9 +25,14 @@ const sizes = {
 
 // Light  
 const light = new THREE.PointLight(0xffffff, 0.1, 100);
-light.intensity = 200;
+light.intensity = 150;
 light.position.set( 0, 0, 10 );
 scene.add(light);
+
+const light2 = new THREE.PointLight(0xffffff, 0.1, 100);
+light2.intensity = 30;
+light2.position.set( 0, 0, -20 );
+scene.add(light2);
 
 // Camera
 const camera = new THREE.PerspectiveCamera(
@@ -53,7 +58,7 @@ updateWebGlMargin();
 const controls = new OrbitControls(camera, canvas);
 controls.enableDamping = true;
 controls.autoRotate = true;
-controls.autoRotateSpeed = 3;
+controls.autoRotateSpeed = 5;
 controls.enablePan = false;
 controls.enableZoom = false;
 
@@ -108,7 +113,7 @@ window.addEventListener('scroll', () => {
   const scrollValue = getScrollY();
   const scrollDelta = scrollValue - previousScrollValue;
   let orientation = getCameraOrientation();
-  orientation += (scrollDelta * 0.0075);
+  orientation += (scrollDelta * 0.015);
   orientation %= (2 * Math.PI);
 
   const yzHypothenuse = Math.sqrt(cameraDistance**2 - camera.position.x**2);
