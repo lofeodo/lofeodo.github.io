@@ -173,6 +173,7 @@ body{
 .image-w-text {
   margin: 30px auto;
   width: 80%;
+  position: relative;
 }
 
 .image-w-text img{
@@ -185,6 +186,39 @@ body{
 .right-aligned img {
   float: left;
   margin-right: 15px;
+}
+
+/* 🔗 icon */
+.image-w-text a::after {
+  content: "🔗";
+  position: absolute;
+  top: 10px;
+
+  right: 10px;     /* default */
+  left: auto;
+
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 4px 6px;
+  border-radius: 6px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.image-w-text a:hover::after {
+  opacity: 1;
+}
+
+.image-w-text.right-aligned a::after {
+  left: 10px;
+  right: auto;
+}
+
+.image-w-text.left-aligned a::after {
+  right: 10px;
+  left: auto;
 }
 
 .left-aligned img {
