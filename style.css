@@ -151,6 +151,7 @@ body{
   list-style: none;
   justify-content: space-evenly;
   margin-top: 50px;
+  row-gap: 40px;
 }
 
 .about .toolbelt li{
