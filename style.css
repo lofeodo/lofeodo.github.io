@@ -162,6 +162,10 @@ body{
   font-size: 1.2em;
 }
 
+.cv-chain {
+  text-decoration: none;   /* ❌ remove underline */
+}
+
 .portfolio .content {
   display: flex;
   flex-direction: column;
