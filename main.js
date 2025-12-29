@@ -19,8 +19,8 @@ scene.add(mesh);
 
 // Sizes
 const sizes = {
-  width: window.innerWidth / 4,
-  height: window.innerWidth / 4
+  width: window.innerWidth / 5,
+  height: window.innerWidth / 5
 }
 
 // Light  
