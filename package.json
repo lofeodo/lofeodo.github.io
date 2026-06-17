@@ -2,7 +2,7 @@
   "name": "vite-portfolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://lofeodo.github.io",
+  "homepage": "https://lofeodo.com",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
