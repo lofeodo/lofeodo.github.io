@@ -72,7 +72,8 @@ body{
 
   grid-template-columns: 1fr 8fr 1fr;
   grid-template-rows: auto 1fr;
-  gap: 1px;
+  row-gap: 1px;
+  column-gap: 0;
   border-bottom: 1px solid white;
 }
 
