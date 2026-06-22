@@ -18,9 +18,10 @@ const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
 
 // Sizes
+const sphereSize = () => Math.min(window.innerWidth / 3, window.innerHeight * 0.5);
 const sizes = {
-  width: window.innerWidth / 5,
-  height: window.innerWidth / 5
+  width: sphereSize(),
+  height: sphereSize()
 }
 
 // Light  
@@ -66,8 +67,8 @@ controls.enabled = window.innerWidth > 768;
 // Resize
 window.addEventListener('resize', () => {
   // Update sizes
-  sizes.width = window.innerWidth / 4;
-  sizes.height = window.innerWidth / 4;
+  sizes.width = sphereSize();
+  sizes.height = sphereSize();
   updateWebGlMargin();
 
   // Update camera

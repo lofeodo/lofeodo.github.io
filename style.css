@@ -23,6 +23,7 @@ body{
   margin: 0;
   max-width: 100%;
   height: auto;
+  background-color: black;
 
   font-family: 'Roboto Mono';
   scrollbar-width: thin; /* Firefox */
@@ -46,7 +47,7 @@ body{
 
 .grid > div > div {
   margin: 0;
-  background-color: black;
+  background-color: transparent;
   padding: 30px;
   height: 100%;
   width: 100%;
@@ -60,7 +61,7 @@ body{
   height: auto;
 
   margin: 0;
-  background: white;
+  background: transparent;
 }
 
 .page{
@@ -264,6 +265,8 @@ body{
 .content
 {
   grid-area: 2 / 2 / 2 / 2;
+  position: relative;
+  z-index: 2;
 }
 
 .navigation{
