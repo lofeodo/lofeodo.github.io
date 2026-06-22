@@ -25,14 +25,9 @@ const sizes = {
 }
 
 // Light  
-const light = new THREE.PointLight(0xffffff, 0.1, 100);
-light.intensity = 150;
-light.position.set( 0, 0, 10 );
-scene.add(light);
-
 const light2 = new THREE.PointLight(0xffffff, 0.1, 100);
-light2.intensity = 200;
-light2.position.set( 0, 0, -50 );
+light2.intensity = 1000;
+light2.position.set( 0, 0, -25 );
 scene.add(light2);
 
 // Camera
