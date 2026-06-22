@@ -120,6 +120,7 @@ body{
   align-items: flex-end;
   text-align: right;
   height: 100%;
+  opacity: 0;
 }
 
 .hero .text span{
@@ -350,6 +351,83 @@ button{
   opacity: 1;
   transform: translateX(0);
   transform: translateY(0);
+}
+
+.card-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.card-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact .email-icon {
+  vertical-align: middle;
+  width: 1em;
+  height: 1em;
+  margin-right: 0.35em;
+  fill: currentColor;
+}
+
+.contact-distort {
+  opacity: 0;
+  filter: blur(12px);
+  transform: scale(0.92) skewX(-4deg);
+  transition: opacity 0.7s ease, filter 0.7s ease, transform 0.7s ease;
+}
+
+.contact-distort-visible {
+  opacity: 1;
+  filter: blur(0px);
+  transform: scale(1) skewX(0deg);
+}
+
+/* Toolbelt animations — base hidden state */
+.tool-animate {
+  opacity: 0;
+}
+
+/* A: neon flicker-on */
+@keyframes tool-flicker {
+  0%   { opacity: 0; text-shadow: none; }
+  8%   { opacity: 0.9; text-shadow: 0 0 10px white; }
+  13%  { opacity: 0; text-shadow: none; }
+  22%  { opacity: 1; text-shadow: 0 0 14px white; }
+  28%  { opacity: 0.3; text-shadow: none; }
+  38%  { opacity: 1; text-shadow: 0 0 6px white; }
+  100% { opacity: 1; text-shadow: none; }
+}
+
+.tool-animate.tool-visible.tool-flicker {
+  animation: tool-flicker 0.9s ease forwards;
+}
+
+/* B: chromatic aberration snap */
+@keyframes tool-chroma {
+  0%   { opacity: 0;   text-shadow: -7px 0 0 #ff2020, 7px 0 0 #00e5ff; }
+  55%  { opacity: 0.8; text-shadow: -4px 0 0 #ff2020, 4px 0 0 #00e5ff; }
+  82%  { opacity: 1;   text-shadow: -1px 0 0 #ff2020, 1px 0 0 #00e5ff; }
+  96%  { text-shadow: 0px 0 0 #ff2020, 0px 0 0 #00e5ff; }
+  100% { opacity: 1;   text-shadow: none; }
+}
+
+.tool-animate.tool-visible.tool-chroma {
+  animation: tool-chroma 0.65s ease forwards;
+}
+
+/* C: stamp slam with impact flash */
+@keyframes tool-stamp {
+  0%   { opacity: 0; transform: scale(1.7); text-shadow: none; }
+  65%  { opacity: 1; transform: scale(0.92); text-shadow: 0 0 28px rgba(255,255,255,0.95); }
+  80%  { transform: scale(1.05); text-shadow: 0 0 8px rgba(255,255,255,0.3); }
+  100% { opacity: 1; transform: scale(1); text-shadow: none; }
+}
+
+.tool-animate.tool-visible.tool-stamp {
+  animation: tool-stamp 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 @media (max-width: 768px) {

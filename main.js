@@ -210,5 +210,4 @@ tl.fromTo(mesh.scale, { z: 0, x: 0, y: 0 }, {z: 1, x: 1, y: 1});
 
 const textDiv = document.querySelector('.page.hero .text');
 
-tl.duration( 2 );
-tl.fromTo(textDiv, {x: "10%", opacity: "0%"}, {x: "0%", opacity: "100%"});
+tl.fromTo(textDiv, {x: "10%", opacity: "0%"}, {x: "0%", opacity: "100%", duration: 2}, 0);
