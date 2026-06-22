@@ -351,3 +351,106 @@ button{
   transform: translateX(0);
   transform: translateY(0);
 }
+
+@media (max-width: 768px) {
+  /* Prevent grid items from overflowing their column */
+  .content {
+    min-width: 0;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  /* text-box is an unknown inline element — make it block so it constrains children */
+  text-box {
+    display: block;
+  }
+
+  /* Hero — full screen, content stretched top-to-bottom */
+  .hero {
+    align-items: stretch;
+  }
+
+  .hero .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: stretch;
+    padding: 40px 20px 50px;
+  }
+
+  #rollingHeroText {
+    font-size: clamp(1rem, 5vw, 1.4rem);
+    margin-bottom: 8px;
+  }
+
+  .hero .name {
+    font-size: clamp(2rem, 11vw, 3.5rem);
+    left: 0;
+    line-height: 1.1;
+  }
+
+  .hero .text {
+    height: auto;
+    align-items: flex-start;
+    text-align: left;
+    margin-top: 0;
+  }
+
+  .hero .text span {
+    padding: 3px 0;
+  }
+
+  .text {
+    font-size: clamp(0.875rem, 3.5vw, 1.2rem);
+  }
+
+  /* Nav — shrink buttons to fit three items */
+  button {
+    padding-right: 15px;
+    font-size: 0.82em;
+  }
+
+  /* Portfolio */
+  .image-w-text {
+    width: 95%;
+  }
+
+  .image-w-text img {
+    float: none;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 0 12px 0;
+  }
+
+  .left-aligned text-box {
+    text-align: left;
+  }
+
+  /* About */
+  .about .content {
+    padding: 30px 20px;
+  }
+
+  .about .toolbelt li {
+    flex: 0 0 auto;
+  }
+
+  /* Contact */
+  .contact .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 40px 20px;
+  }
+
+  .contact .email {
+    position: static;
+    top: auto;
+  }
+
+  .contact .email h1 {
+    font-size: clamp(0.85rem, 4vw, 1.5rem);
+    overflow-wrap: anywhere;
+  }
+}
