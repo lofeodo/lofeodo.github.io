@@ -360,33 +360,40 @@ button{
     word-break: break-word;
   }
 
-  /* Hero takes less vertical space on mobile */
-  .hero {
-    min-height: 60vh;
-  }
-
   /* text-box is an unknown inline element — make it block so it constrains children */
   text-box {
     display: block;
   }
 
-  /* Hero */
+  /* Hero — full screen, content stretched top-to-bottom */
+  .hero {
+    align-items: stretch;
+  }
+
   .hero .content {
-    display: block;
-    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: stretch;
+    padding: 40px 20px 50px;
+  }
+
+  #rollingHeroText {
+    font-size: clamp(1rem, 5vw, 1.4rem);
+    margin-bottom: 8px;
   }
 
   .hero .name {
-    font-size: clamp(1.5rem, 8vw, 2.5rem);
+    font-size: clamp(2rem, 11vw, 3.5rem);
     left: 0;
+    line-height: 1.1;
   }
 
-  /* Remove height: 100% so text flows directly under the name instead of anchoring to bottom */
   .hero .text {
     height: auto;
     align-items: flex-start;
     text-align: left;
-    margin-top: 20px;
+    margin-top: 0;
   }
 
   .hero .text span {
