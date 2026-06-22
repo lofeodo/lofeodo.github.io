@@ -61,6 +61,7 @@ controls.autoRotate = true;
 controls.autoRotateSpeed = 5;
 controls.enablePan = false;
 controls.enableZoom = false;
+controls.enabled = window.innerWidth > 768;
 
 // Resize
 window.addEventListener('resize', () => {
@@ -73,6 +74,8 @@ window.addEventListener('resize', () => {
   camera.updateProjectionMatrix();
   camera.aspect = sizes.width / sizes.height;
   renderer.setSize(sizes.width, sizes.height);
+
+  controls.enabled = window.innerWidth > 768;
 });
 
 // Dragging
