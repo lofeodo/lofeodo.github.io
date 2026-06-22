@@ -1,7 +1,6 @@
 const CANVAS_WIDTH = 60;
 const MAX_AMP = 28;
 const FREQ = 0.018;
-const PHASE_SPEED = 0.035;
 
 const leftCanvas = document.createElement('canvas');
 const rightCanvas = document.createElement('canvas');
@@ -60,9 +59,6 @@ function drawLine(ctx, canvasW, canvasH, amp, ph, direction) {
   const dpr = window.devicePixelRatio || 1;
   ctx.clearRect(0, 0, canvasW, canvasH);
 
-  ctx.fillStyle = 'black';
-  ctx.fillRect(0, 0, canvasW, canvasH);
-
   const cx = (canvasW / 2);
   ctx.beginPath();
   ctx.strokeStyle = 'white';
@@ -83,7 +79,7 @@ function animate() {
   scrollVelocity *= 0.82;
   const targetAmp = Math.min(Math.abs(scrollVelocity) * 1.8, MAX_AMP);
   amplitude += (targetAmp - amplitude) * 0.12;
-  phase += PHASE_SPEED;
+  phase += 0.08 + amplitude * 0.008;
 
   const dpr = window.devicePixelRatio || 1;
   const lCtx = leftCanvas.getContext('2d');
