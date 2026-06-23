@@ -59,7 +59,7 @@ body{
   left: 0;
   right: 0;
   background: black;
-  z-index: 6;
+  z-index: 3;
 }
 
 #fixedHeader {
@@ -389,7 +389,7 @@ button{
 
 .lineThroughSphere{
   position: absolute;
-  z-index: 3;
+  z-index: 6;
   width: 100%;
   border-top: 5px solid white;
 }

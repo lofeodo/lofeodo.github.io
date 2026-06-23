@@ -52,9 +52,9 @@ function crossfadeMarquee(newMarqueeId) {
   fixedMarquee.style.opacity = '0';
   fixedMarquee.offsetHeight; // force reflow
   loadMarqueeContent(newMarqueeId);
-  fixedMarquee.style.transition = 'opacity 0.25s ease';
+  fixedMarquee.style.transition = 'opacity 0.5s ease';
   fixedMarquee.style.opacity = '1';
-  crossfadeTimer = setTimeout(() => { crossfadeTimer = null; }, 250);
+  crossfadeTimer = setTimeout(() => { crossfadeTimer = null; }, 500);
 }
 
 function updateFixedHeader() {
