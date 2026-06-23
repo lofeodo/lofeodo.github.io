@@ -7,8 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sixtyfour&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/assets/index-DCJp4Xak.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BXPqJjlb.css">
+    <link rel="icon" href="/logo.svg" type="image/svg+xml">
+    <script type="module" crossorigin src="/assets/index-CN3ABvpn.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-m5U_1-X4.css">
   </head>
   <body>
     <div class="lineThroughSphere" id="heroLine"></div>
@@ -16,24 +17,35 @@
     <div class="lineThroughSphere" id="portfolioLine"></div>
     <div class="lineThroughSphere" id="contactLine"></div>
     <canvas class="webgl"></canvas>
+    <div id="fixedHeaderBg"></div>
+    <div id="fixedHeader">
+      <div id="fixedNavSpacer">
+        <a id="logoLink" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" aria-label="Home">
+          <img src="/logo.svg" alt="D" width="36" height="36">
+        </a>
+      </div>
+      <div class="navigation">
+        <button onclick="scrollToSection('portfolioID')">Portfolio</button>
+        <button onclick="scrollToSection('aboutID')">About</button>
+        <button onclick="scrollToSection('contactID')">Contact</button>
+      </div>
+      <div id="fixedMarquee" class="marquee">
+        <div class="marquee-content scroll"></div>
+        <div class="marquee-content scroll"></div>
+      </div>
+    </div>
       <div class="grid">
           <div class="page hero" id="heroID">
               <div></div>
               <div></div>
               <div></div>
               <div></div>
-              <div class="titlebar">
-                  <div class="navigation">
-                      <button onclick="scrollToSection('portfolioID')">Portfolio</button>
-                      <button onclick="scrollToSection('aboutID')">About</button>
-                      <button onclick="scrollToSection('contactID')">Contact</button>
-                  </div>
-              </div>
+              <div class="titlebar"></div>
               <div class="content" id="heroContent">
                 <span id="rollingHeroText">M.Sc.Comp.Sci.</span>
                 <h1 class="name" id="name"></h1>
                 <div class="text">
-                    <span>Hello fellow nerd,</span>
+                    <span>Hello,</span>
                     <a
                         href="/cv.pdf"
                         target="_blank"
@@ -307,6 +319,6 @@
               </div>
               <div></div>
           </div>
-      </div>
+      </div>
   </body>
 </html>
