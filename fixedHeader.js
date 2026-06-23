@@ -7,6 +7,10 @@ function syncHeaderDimensions() {
   const h = header.offsetHeight;
   document.documentElement.style.setProperty('--fixed-header-height', h + 'px');
   headerBg.style.height = h + 'px';
+  const sampleMarquee = document.getElementById('portfolioMarquee');
+  if (sampleMarquee) {
+    document.documentElement.style.setProperty('--section-marquee-height', sampleMarquee.offsetHeight + 'px');
+  }
 }
 
 function updateNavOffset() {

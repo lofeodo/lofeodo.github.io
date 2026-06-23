@@ -9,7 +9,7 @@
   position: fixed;
   top: var(--webGlMargin);
   right: var(--webGlMargin);
-  z-index: 5;
+  z-index: 4;
   cursor: grab;
 }
 
@@ -59,7 +59,7 @@ body{
   left: 0;
   right: 0;
   background: black;
-  z-index: 4;
+  z-index: 6;
 }
 
 #fixedHeader {
@@ -77,6 +77,15 @@ body{
 
 #fixedNavSpacer {
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#logoLink {
+  display: flex;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 #fixedHeader .navigation {
@@ -116,7 +125,7 @@ body{
 }
 
 .page.hero {
-  min-height: calc(100vh - var(--fixed-header-height, 0px));
+  min-height: calc(100vh - var(--fixed-header-height, 0px) - var(--section-marquee-height, 0px) - 5px);
 }
 
 .titlebar{
@@ -323,7 +332,7 @@ body{
 {
   grid-area: 2 / 2 / 2 / 2;
   position: relative;
-  z-index: 2;
+  z-index: 5;
 }
 
 .navigation{

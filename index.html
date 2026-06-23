@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sixtyfour&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/logo.svg" type="image/svg+xml">
   </head>
   <body>
     <div class="lineThroughSphere" id="heroLine"></div>
@@ -18,7 +19,11 @@
     <script type="module" src="/main.js"></script>
     <div id="fixedHeaderBg"></div>
     <div id="fixedHeader">
-      <div id="fixedNavSpacer"></div>
+      <div id="fixedNavSpacer">
+        <a id="logoLink" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" aria-label="Home">
+          <img src="/logo.svg" alt="D" width="36" height="36">
+        </a>
+      </div>
       <div class="navigation">
         <button onclick="scrollToSection('portfolioID')">Portfolio</button>
         <button onclick="scrollToSection('aboutID')">About</button>
