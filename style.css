@@ -113,11 +113,6 @@ body{
   grid-template-rows: auto 1fr;
   row-gap: 1px;
   column-gap: 0;
-  border-bottom: 1px solid white;
-}
-
-.contact{
-  border-bottom: none;
 }
 
 .page.hero {
