@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sixtyfour&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/logo.svg" type="image/svg+xml">
   </head>
   <body>
     <div class="lineThroughSphere" id="heroLine"></div>
@@ -16,24 +17,35 @@
     <div class="lineThroughSphere" id="contactLine"></div>
     <canvas class="webgl"></canvas>
     <script type="module" src="/main.js"></script>
+    <div id="fixedHeaderBg"></div>
+    <div id="fixedHeader">
+      <div id="fixedNavSpacer">
+        <a id="logoLink" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" aria-label="Home">
+          <img src="/logo.svg" alt="D" width="36" height="36">
+        </a>
+      </div>
+      <div class="navigation">
+        <button onclick="scrollToSection('portfolioID')">Portfolio</button>
+        <button onclick="scrollToSection('aboutID')">About</button>
+        <button onclick="scrollToSection('contactID')">Contact</button>
+      </div>
+      <div id="fixedMarquee" class="marquee">
+        <div class="marquee-content scroll"></div>
+        <div class="marquee-content scroll"></div>
+      </div>
+    </div>
       <div class="grid">
           <div class="page hero" id="heroID">
               <div></div>
               <div></div>
               <div></div>
               <div></div>
-              <div class="titlebar">
-                  <div class="navigation">
-                      <button onclick="scrollToSection('portfolioID')">Portfolio</button>
-                      <button onclick="scrollToSection('aboutID')">About</button>
-                      <button onclick="scrollToSection('contactID')">Contact</button>
-                  </div>
-              </div>
+              <div class="titlebar"></div>
               <div class="content" id="heroContent">
                 <span id="rollingHeroText">M.Sc.Comp.Sci.</span>
                 <h1 class="name" id="name"></h1>
                 <div class="text">
-                    <span>Hello fellow nerd,</span>
+                    <span>Hello,</span>
                     <a
                         href="/cv.pdf"
                         target="_blank"
@@ -309,6 +321,7 @@
           </div>
       </div>
       <script src="scrollToFunction.js" type="module"></script>
+      <script src="fixedHeader.js" type="module"></script>
       <script src="sphereLines.js" type="module"></script>
       <script src="rollingText.js" type="module"></script>
       <script src="typeWriter.js" type="module"></script>

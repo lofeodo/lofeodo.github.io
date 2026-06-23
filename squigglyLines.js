@@ -9,7 +9,7 @@ for (const c of [leftCanvas, rightCanvas]) {
   c.style.position = 'fixed';
   c.style.top = '0';
   c.style.width = CANVAS_WIDTH + 'px';
-  c.style.zIndex = '3';
+  c.style.zIndex = '8';
   c.style.pointerEvents = 'none';
   document.body.appendChild(c);
 }

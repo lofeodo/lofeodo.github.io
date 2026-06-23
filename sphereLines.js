@@ -3,10 +3,10 @@ const heroLine = document.getElementById('heroLine');
 const aboutLine = document.getElementById('aboutLine');
 const portfolioLine = document.getElementById('portfolioLine');
 const contactLine = document.getElementById('contactLine');
-const heroContent = document.getElementById('heroContent');
 const aboutMarquee = document.getElementById('aboutMarquee');
 const portfolioMarquee = document.getElementById('portfolioMarquee');
 const contactMarquee = document.getElementById('contactMarquee');
+const fixedHeaderEl = document.getElementById('fixedHeader');
 
 updateLinePositions();
 
@@ -21,7 +21,8 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 function updateLinePositions(){
-    heroLine.style.top = heroContent.offsetTop - 1 + 'px';
+    heroLine.style.position = 'fixed';
+    heroLine.style.top = fixedHeaderEl.offsetHeight + 'px';
     aboutLine.style.top = aboutMarquee.offsetTop + aboutMarquee.offsetHeight + 'px';
     portfolioLine.style.top = portfolioMarquee.offsetTop + portfolioMarquee.offsetHeight + 'px';
     contactLine.style.top = contactMarquee.offsetTop + contactMarquee.offsetHeight + 'px';
