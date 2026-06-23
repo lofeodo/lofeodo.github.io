@@ -35,7 +35,7 @@
       speed:   rnd(0.4, 0.9),
       life:    rnd(0, ml),
       maxLife: ml,
-      size:    rnd(1.5, 4.0),
+      size:    rnd(2.0, 5.5),
       tier:    Math.floor(rnd(0, FLAME.length)),
     };
   }
@@ -43,13 +43,13 @@
   function Envelope(initial) { this.init(initial !== false); }
 
   Envelope.prototype.init = function (initial) {
-    this.w  = rnd(18, 36);
+    this.w  = rnd(24, 46);
     this.h  = this.w * 0.65;
     this.x  = rnd(0, W);
     this.y  = initial
       ? rnd(-this.h, H + this.h)
       : H + this.h + rnd(20, H * 0.7);
-    this.vy = -rnd(0.15, 0.37);
+    this.vy = -rnd(0.22, 0.52);
     this.vx = rnd(-0.18, 0.18);
     this.wob = rnd(0, Math.PI * 2);
     this.wobSpeed = rnd(0.008, 0.020);
@@ -160,7 +160,7 @@
     ctx.restore();
   };
 
-  var COUNT     = 8;
+  var COUNT     = 13;
   var envelopes = [];
   for (var i = 0; i < COUNT; i++) envelopes.push(new Envelope(true));
 
