@@ -9,7 +9,7 @@
   position: fixed;
   top: var(--webGlMargin);
   right: var(--webGlMargin);
-  z-index: 4;
+  z-index: 7;
   cursor: grab;
 }
 
