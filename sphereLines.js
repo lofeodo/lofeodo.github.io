@@ -22,6 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 function updateLinePositions(){
     heroLine.style.position = 'fixed';
+    heroLine.style.zIndex = '2';
     heroLine.style.top = fixedHeaderEl.offsetHeight + 'px';
     aboutLine.style.top = aboutMarquee.offsetTop + aboutMarquee.offsetHeight + 'px';
     portfolioLine.style.top = portfolioMarquee.offsetTop + portfolioMarquee.offsetHeight + 'px';

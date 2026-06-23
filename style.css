@@ -59,7 +59,7 @@ body{
   left: 0;
   right: 0;
   background: black;
-  z-index: 3;
+  z-index: 6;
 }
 
 #fixedHeader {
