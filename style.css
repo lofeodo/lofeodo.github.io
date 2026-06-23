@@ -9,7 +9,7 @@
   position: fixed;
   top: var(--webGlMargin);
   right: var(--webGlMargin);
-  z-index: 1;
+  z-index: 5;
   cursor: grab;
 }
 
@@ -53,6 +53,43 @@ body{
   width: 100%;
 }
 
+#fixedHeaderBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  z-index: 4;
+}
+
+#fixedHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  font: 1em 'Sixtyfour';
+  padding: 30px 0;
+}
+
+#fixedNavSpacer {
+  flex-shrink: 0;
+}
+
+#fixedHeader .navigation {
+  padding-left: 30px;
+}
+
+#fixedMarquee {
+  flex: 1;
+  opacity: 0;
+  overflow: hidden;
+  position: relative;
+}
+
 .grid{
   display: grid;
   grid-template-columns: 1fr;
@@ -62,6 +99,7 @@ body{
 
   margin: 0;
   background: transparent;
+  padding-top: var(--fixed-header-height, 0px);
 }
 
 .page{
@@ -82,6 +120,10 @@ body{
   border-bottom: none;
 }
 
+.page.hero {
+  min-height: calc(100vh - var(--fixed-header-height, 0px));
+}
+
 .titlebar{
   font: 1em 'Sixtyfour';
   grid-area: 1 / 1 / 1 / 4;
@@ -96,7 +138,13 @@ body{
 }
 
 .hero .titlebar{
-  grid-area: 1 / 2 / 1 / 2;
+  display: none;
+}
+
+.portfolio .titlebar.marquee,
+.about .titlebar.marquee,
+.contact .titlebar.marquee {
+  visibility: hidden;
 }
 
 .hero .content{
@@ -337,7 +385,7 @@ button{
 
 .lineThroughSphere{
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
   border-top: 5px solid white;
 }
