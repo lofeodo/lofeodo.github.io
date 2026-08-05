@@ -218,7 +218,7 @@ body{
 }
 
 .cv-chain {
-  text-decoration: none;   /* ❌ remove underline */
+  text-decoration: underline;
 }
 
 .portfolio .content {
@@ -295,28 +295,19 @@ body{
 }
 
 .doc-links {
-  display: flex;
-  flex-direction: column;
   margin-top: 10px;
-  gap: 6px;
 }
 
 .chain-link {
-  text-decoration: none;
-  position: relative;
-  display: inline-block;
-  width: fit-content;
+  display: block;
+  text-decoration: underline;
+  margin: 4px 0;
 }
 
 .chain-link::after {
   content: "🔗";
   margin-left: 8px;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
-.chain-link:hover::after {
-  opacity: 1;
+  text-decoration: none;
 }
 
 .left-aligned img {
