@@ -298,16 +298,12 @@ body{
   margin-top: 10px;
 }
 
-.chain-link {
-  display: block;
-  text-decoration: underline;
+.doc-line {
   margin: 4px 0;
 }
 
-.chain-link::after {
-  content: "🔗";
-  margin-left: 8px;
-  text-decoration: none;
+.chain-link {
+  text-decoration: underline;
 }
 
 .left-aligned img {
