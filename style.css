@@ -294,6 +294,31 @@ body{
   left: auto;
 }
 
+.doc-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  gap: 6px;
+}
+
+.chain-link {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+}
+
+.chain-link::after {
+  content: "🔗";
+  margin-left: 8px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.chain-link:hover::after {
+  opacity: 1;
+}
+
 .left-aligned img {
   float: right;
   margin-left: 15px;
