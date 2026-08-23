@@ -125,7 +125,7 @@ body{
 }
 
 .page.hero {
-  min-height: calc(100vh - var(--fixed-header-height, 0px) - var(--section-marquee-height, 0px) - 5px);
+  min-height: calc(100vh - var(--fixed-header-height, 0px));
 }
 
 .titlebar{
