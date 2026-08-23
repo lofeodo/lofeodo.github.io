@@ -9,7 +9,7 @@
   position: fixed;
   top: var(--webGlMargin);
   right: var(--webGlMargin);
-  z-index: 2;
+  z-index: 7;
   cursor: grab;
 }
 
@@ -389,7 +389,7 @@ button{
 
 .lineThroughSphere{
   position: absolute;
-  z-index: 3;
+  z-index: 6;
   width: 100%;
   border-top: 5px solid white;
 }
