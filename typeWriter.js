@@ -2,6 +2,8 @@ const nameElement = document.getElementById("name");
 const nameText = "Daniel Lofeodo";
 const caret = "|";
 
+nameElement.textContent = "";
+
 let i = 0;
 function typeWriter() {
     if ( i < nameText.length )
