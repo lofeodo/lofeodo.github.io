@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lofeodo.com/sitemap.xml
