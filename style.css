@@ -309,7 +309,24 @@ body{
 }
 
 .chain-link {
-  text-decoration: underline;
+  display: inline-block;
+  padding: 3px 12px;
+  color: #c9b6ff;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1.5px solid #a98bff;
+  border-radius: 999px;
+  background: rgba(169, 139, 255, 0.14);
+  box-shadow: 0 0 10px rgba(169, 139, 255, 0.35);
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.chain-link:hover,
+.chain-link:focus-visible {
+  color: #000;
+  background: #c9b6ff;
+  box-shadow: 0 0 18px rgba(169, 139, 255, 0.7);
+  transform: translateY(-1px);
 }
 
 .left-aligned img {
