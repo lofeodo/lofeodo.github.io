@@ -290,6 +290,11 @@ body{
   opacity: 1;
 }
 
+/* text pills already carry their own 🔗 — no hover overlay */
+.image-w-text a.chain-link::after {
+  content: none;
+}
+
 .image-w-text.right-aligned a::after {
   left: 10px;
   right: auto;
