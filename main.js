@@ -18,7 +18,7 @@ const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
 
 // Sizes
-const sphereSize = () => Math.min(window.innerWidth / 3, window.innerHeight * 0.5);
+const sphereSize = () => Math.min(window.innerWidth / 4, window.innerHeight * 0.4);
 const sizes = {
   width: sphereSize(),
   height: sphereSize()
