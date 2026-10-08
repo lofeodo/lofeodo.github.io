@@ -23,7 +23,8 @@ window.addEventListener('DOMContentLoaded', () => {
 function updateLinePositions(){
     heroLine.style.position = 'fixed';
     heroLine.style.top = fixedHeaderEl.offsetHeight + 'px';
-    aboutLine.style.top = aboutMarquee.offsetTop + aboutMarquee.offsetHeight + 'px';
-    portfolioLine.style.top = portfolioMarquee.offsetTop + portfolioMarquee.offsetHeight + 'px';
-    contactLine.style.top = contactMarquee.offsetTop + contactMarquee.offsetHeight + 'px';
+    // dividers sit on the section boundary, so they appear the moment the previous section scrolls away
+    aboutLine.style.top = aboutMarquee.offsetTop + 'px';
+    portfolioLine.style.top = portfolioMarquee.offsetTop + 'px';
+    contactLine.style.top = contactMarquee.offsetTop + 'px';
 }
