@@ -131,7 +131,7 @@
                                 Latent SpaceMail: Agentic AI Research Newsletter
                             </a>
                         </h2>
-                        <p>A fully automated weekly newsletter pipeline built on Google Cloud Platform. Six specialized agents orchestrated via Pub/Sub and Firestore fetch, score, and summarize the top ArXiv AI papers and industry news, then compose and deliver personalized HTML emails to subscribers — with bilingual support, subscriber preferences, and Firebase Auth.</p>
+                        <p>A weekly AI newsletter that writes itself. Six AI agents pick a standout research paper, sift through the week's tech news, and email a personalized briefing to subscribers. It runs on its own, watches its own quality, and I've been using it every Monday since May.</p>
                         <div class="doc-links">
                             <div class="doc-line"><a href="https://newsletter.lofeodo.com" target="_blank" class="chain-link">View the newsletter site 🔗</a></div>
                             <div class="doc-line"><a href="https://github.com/lofeodo/ai-news-agent" target="_blank" class="chain-link">View the GitHub repo 🔗</a></div>
@@ -148,7 +148,7 @@
                                 RAG With Receipts: Benchmarking RAG Accuracy, Grounding, and Latency
                             </a>
                         </h2>
-                        <p>An evaluation harness that measures a retrieval-augmented generation (RAG) pipeline on both quality and speed, using cited question answering over the Old School RuneScape Wiki as the test bed. Every claim must cite the exact retrieved chunk it came from, so retrieval, correctness, and grounding can each be scored: 96.0% retrieval hit rate, 83.6% answer correctness, and 94.8% grounding, with per-stage latency profiling. Benchmarks reranker models, Vertex AI Search, Haiku vs. Sonnet generation, and FAISS vs. pgvector backends.</p>
+                        <p>An AI question-answering system that shows its sources. Ask about Old School RuneScape and every answer links to the exact passage it came from, so you can check it. I tested it on 55 questions: it found the right passage 96% of the time, and says "I don't know" instead of guessing.</p>
                         <div class="doc-links">
                             <div class="doc-line"><a href="https://rag-receipts-api-374659103328.northamerica-northeast1.run.app/" target="_blank" class="chain-link">View the live demo 🔗</a></div>
                             <div class="doc-line"><a href="https://github.com/lofeodo/rag-with-receipts" target="_blank" class="chain-link">View the GitHub repo 🔗</a></div>
@@ -165,7 +165,7 @@
                                 Autonomous Hydro-Dam Control: Managing 1-in-10,000-Year Extreme Flood Events with RL
                             </a>
                         </h2>
-                        <p>A Reinforcement Learning (RL) agent designed to optimize water release strategies for hydroelectric dams during extreme flood events. The project focuses on autonomous decision-making to ensure water levels remain within critical safety boundaries to prevent structural failure.</p>
+                        <p>An AI that learns to run a hydroelectric dam like a real operator, so engineers can test whether the dam survives extreme floods. Tested on 9 simulated floods (up to 1-in-10,000-year), it never breached safety limits and released 83% less spilled water than the industry software it was compared against.</p>
                         <div class="doc-links">
                             <div class="doc-line"><a href="https://drive.google.com/file/d/1KJ1cfpOEB_ah8kxVlMelmHqcl2E1GNid/view?usp=sharing" target="_blank" class="chain-link">View the report 🔗</a> (French)</div>
                             <div class="doc-line"><a href="/hydroqc_poster.pdf" target="_blank" class="chain-link">View the conference poster 🔗</a> (English)</div>
@@ -182,7 +182,7 @@
                                 RuneScape Infinite Prayer Plugin
                             </a>
                         </h2>
-                        <p>A RuneLite plugin that exploits a timing mechanic to grant unlimited prayer points. Reached 40+ paying customers through organic marketing via YouTube videos and forum posts.</p>
+                        <p>A plugin for the game RuneScape that gives players unlimited prayer points by exploiting a timing quirk. It found 40+ paying customers through YouTube videos and forum posts alone.</p>
                     </text-box>
                 </div>
                 <div class="image-w-text right-aligned card-animate">
@@ -195,7 +195,7 @@
                                 Adversarial RL for Fast Nash Equilibria
                             </a>
                         </h2>
-                        <p> Proved that forcing a Reinforcement Learning (RL) AI agent to face a dedicated adversary trained to exploit its weaknesses cuts convergence to a provably unbeatable, game-theoretically optimal strategy nearly in half — from 17.5M to 9.6M training steps — implemented from scratch in a custom multi-agent tactical shooter environment.</p>
+                        <p>A team project on getting game-playing AI to learn faster. We trained one agent to attack another's weaknesses, and the defender reached an unbeatable strategy in about 45% fewer training steps. Built in a custom tactical shooter game, with two teammates.</p>
                     </text-box>
                 </div>
                 <div class="image-w-text left-aligned card-animate">
@@ -208,7 +208,7 @@
                                 Exposing Spatial Blind Spots in Vision-Language Models
                             </a>
                         </h2>
-                        <p>Built a benchmark revealing that frontier VLMs — including GPT-5.4 and Gemini 2.5 Pro — systematically fail at imagining 3D perspective shifts, with lateral accuracy collapsing below random chance at large viewpoint misalignments.</p>
+                        <p>A test showing that top AI models, including GPT-5.4 and Gemini 2.5 Pro, struggle to imagine a scene from another angle. When asked what's left or right from a different viewpoint, GPT-4o does worse than random guessing at the hardest angles.</p>
                     </text-box>
                 </div>
                 <div class="image-w-text right-aligned card-animate">
@@ -221,7 +221,7 @@
                                 LLM-Driven Deterministic Clinical Guideline Compiler
                             </a>
                         </h2>
-                        <p>Built a deterministic clinical guideline compiler that transforms clinical guideline PDFs into machine-executable, audit-ready decision workflows—using LLMs only at build time. The system enforces strict schemas, line-level traceability, and fail-closed validation, producing reproducible artifacts with cryptographic hashes and zero inference-time AI. Structured reasoning, engineered for safety and trust.</p>
+                        <p>Turns clinical guideline PDFs into step-by-step decision workflows that a computer can follow, with every step traceable to a line in the source. AI is used only while building them, never when they run, so the results are repeatable and safe to audit.</p>
                     </text-box>
                 </div>
                 <div class="image-w-text left-aligned card-animate">
@@ -234,7 +234,7 @@
                                 n<sup>2</sup> × n<sup>2</sup> Sudoku Solver
                             </a>
                         </h2>
-                        <p>A Sudoku solver that solves any solvable <em>n<sup>2</sup> × n<sup>2</sup></em> puzzle, where <em>n</em> ∈ ℤ<sup>+</sup>, using tree recursion. The algorithm recursively explores possible board configurations, backtracking when conflicts arise. This ensures all possibilities are considered, guaranteeing a solution for valid puzzles. By combining recursion and backtracking, the solver efficiently handles larger grids and adapts to different Sudoku variations.</p>
+                        <p>A Sudoku solver that handles puzzles of any size, from the classic 9×9 to 16×16 and beyond. It tries a number, backs up when it hits a dead end, and keeps going until the puzzle is solved.</p>
                     </text-box>
                 </div>
                 <div class="image-w-text right-aligned card-animate">
@@ -247,7 +247,7 @@
                                 Real-time NHL Goal Probability Prediction
                             </a>
                         </h2>
-                        <p>An application that uses REST API requests to retrieve NHL shot data and convert it into feature vectors for machine learning. It features neural networks, decision trees, logistic regression, extensive feature engineering, and data preprocessing. A dockerized tool allows real-time analysis by inputting a game ID. The codebase includes tools for performance evaluation, graphing, and goal probability estimation.</p>
+                        <p>A tool that predicts the chance an NHL shot becomes a goal. Enter a game ID and it analyzes the game's shots live, using machine learning models trained on real NHL data.</p>
                     </text-box>
                 </div>
               </div>
@@ -283,35 +283,41 @@
               <div class="content">
                 <div class="text">
                     <h2>Hello!</h2>
-                    <span>I build <strong>end-to-end products</strong>: functional, useful, and well-crafted. M.Sc. in Machine Learning from <strong>MILA</strong> (Yoshua Bengio's lab, Canada's premier AI research institute), 3 years as a software engineer, B.Eng. in Mechanical Engineering.</span>
-                    <span>I hold AWS certifications in Generative AI and Machine Learning and have shipped production AI pipelines on GCP with Docker, FastAPI, Pub/Sub, and Firebase.</span>
-                    <span>I also have a genuine passion for <strong>Reinforcement Learning</strong>: reward shaping, designing agents, watching them train. It's a hobby as much as a specialty.</span>
+                    <span>I build <strong>production AI systems</strong>: agentic pipelines, RAG, and the MLOps around them. M.Sc. in Machine Learning from <strong>MILA</strong> (Yoshua Bengio's lab, Canada's premier AI research institute), 3 years as a software engineer, B.Eng. in Mechanical Engineering.</span>
+                    <span>I have shipped a live multi-agent LLM pipeline (LangGraph, Pub/Sub, Cloud Run) and a from-scratch RAG system with a 55-question golden eval, reranker benchmarks, and citation grounding checks. I monitor what I ship with drift, cost, and security tests, and I report null results honestly. AWS Certified Machine Learning Engineer (MLA).</span>
+                    <span>My roots are in <strong>Reinforcement Learning</strong>: at Hydro-Québec I built safety-bounded RL agents that stress-test dams under extreme floods. Reward design and rigorous evaluation carry over to everything I build.</span>
                     <span>Here are some of the tools I work with:</span>
                 </div>
                 <ul class="toolbelt">
                     <li><strong>Python</strong></li>
                     <li><strong>C++</strong></li>
                     <li>C#</li>
+                    <li>SQL</li>
                     <li>JavaScript</li>
-                    <li>TypeScript</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
+                    <li><strong>LangGraph</strong></li>
+                    <li><strong>Claude API</strong></li>
+                    <li><strong>RAG</strong></li>
+                    <li><strong>FAISS</strong></li>
+                    <li>pgvector</li>
+                    <li>LangSmith</li>
                     <li><strong>PyTorch</strong></li>
-                    <li><strong>stable-baselines3</strong></li>
-                    <li><strong>gymnasium</strong></li>
-                    <li><strong>scikit-learn</strong></li>
+                    <li>scikit-learn</li>
+                    <li>stable-baselines3</li>
+                    <li>gymnasium</li>
                     <li>XGBoost</li>
                     <li>Pandas</li>
-                    <li>Numpy</li>
-                    <li>matplotlib</li>
                     <li><strong>GCP</strong></li>
                     <li><strong>AWS</strong></li>
                     <li><strong>Docker</strong></li>
+                    <li><strong>Cloud Run</strong></li>
+                    <li>Pub/Sub</li>
+                    <li>Firestore</li>
+                    <li>Databricks</li>
+                    <li>Spark</li>
+                    <li>Weights &amp; Biases</li>
+                    <li>CI/CD</li>
                     <li><strong>FastAPI</strong></li>
                     <li>Firebase</li>
-                    <li>Pub/Sub</li>
-                    <li>Flask</li>
-                    <li>Streamlit</li>
                     <li>Three.js</li>
                 </ul>
               </div>

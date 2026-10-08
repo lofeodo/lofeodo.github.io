@@ -125,7 +125,17 @@ body{
 }
 
 .page.hero {
-  min-height: calc(100vh - var(--fixed-header-height, 0px));
+  /* exactly one viewport including the fixed top bar; dvh tracks the visible area on mobile */
+  --hero-height: calc(100vh - var(--fixed-header-height, 96px));
+  height: var(--hero-height);
+  min-height: 0;
+  grid-template-rows: 0 minmax(0, 1fr);
+}
+
+@supports (height: 100dvh) {
+  .page.hero {
+    --hero-height: calc(100dvh - var(--fixed-header-height, 96px));
+  }
 }
 
 .titlebar{
@@ -152,9 +162,15 @@ body{
 }
 
 .hero .content{
-  display: inline-block;
-  padding: 150px 80px;
-  padding-bottom: 150px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: min(150px, 12vh) 80px;
+}
+
+/* the empty placeholder cells inherit 30px padding and would add a 60px row */
+.hero > div:empty{
+  padding: 0;
 }
 
 .hero .name{
@@ -173,7 +189,8 @@ body{
   justify-content: flex-end;
   align-items: flex-end;
   text-align: right;
-  height: 100%;
+  flex: 1;
+  min-height: 0;
   opacity: 0;
 }
 
